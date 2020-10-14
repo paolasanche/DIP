@@ -17,8 +17,8 @@ class CreateTiposerviciosTable extends Migration
             $table->bigIncrements('idtiposervicios');
             $table->string('nombre');
             $table->rememberToken();
-
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

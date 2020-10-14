@@ -23,6 +23,7 @@ class CreateServiciosTable extends Migration
             $table->foreign('tiposervicios_id')->references('idtiposervicios')->on('tiposervicios');
             $table->remembertoken();
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

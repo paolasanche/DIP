@@ -22,9 +22,9 @@ class CreateUsuariosTable extends Migration
             $table->string("user");
             $table->string("password");
             $table->rememberToken();
-
-
             $table->timestamps();
+            $table->softDeletes();
+            
         });
     }
 

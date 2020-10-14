@@ -23,7 +23,7 @@ class CreateSalonesTable extends Migration
             $table->string('telefono');
             $table->string('correo');
             $table->rememberToken();
-
+            $table->softDeletes();
             $table->timestamps();
         });
     }
