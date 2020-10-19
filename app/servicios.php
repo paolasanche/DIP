@@ -6,6 +6,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class servicios extends Model
 {
-       protected $primarykey = "idservicios";
-    protected $fillable = ["idservicios","nombre","tiposervicios","costo","detalle"];
+       protected $primarykey = "id";
+    protected $fillable = ["id","nombre","tiposervicios","costo","detalle"];
 }

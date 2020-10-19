@@ -8,7 +8,7 @@ class clientes extends Model
 {
     
 
-    protected $primarykey = "idclientes";
-    protected $fillable = ["idclientes","nombre","apellido","correo","telefono","user","password"];
+    protected $primarykey = "id";
+    protected $fillable = ["id","nombre","apellido","correo","telefono","user","password"];
 
 }

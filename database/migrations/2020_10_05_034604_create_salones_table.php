@@ -15,7 +15,7 @@ class CreateSalonesTable extends Migration
     {
         Schema::create('salones', function (Blueprint $table) {
             
-            $table->bigIncrements('idsalones');
+            $table->bigIncrements('id');
             $table->string('direccion');
             $table->string('calle');
             $table->string('cp');
