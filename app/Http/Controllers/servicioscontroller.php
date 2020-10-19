@@ -47,7 +47,10 @@ class servicioscontroller extends Controller
      */
     public function show($id)
     {
-        //
+    
+        $servicios = servicios::find($id);
+        return $servicios; 
+
     }
 
     /**

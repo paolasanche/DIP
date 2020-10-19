@@ -47,7 +47,10 @@ class salonescontroller extends Controller
      */
     public function show($id)
     {
-        //
+    
+        $salones = salones::find($id);
+        return $salones;
+
     }
 
     /**

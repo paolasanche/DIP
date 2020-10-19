@@ -47,7 +47,8 @@ class usuarioscontroller extends Controller
      */
     public function show($id)
     {
-        //
+        $usuarios = usuarios::find($id);
+        return $usuarios; 
     }
 
     /**

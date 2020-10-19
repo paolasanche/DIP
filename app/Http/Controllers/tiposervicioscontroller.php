@@ -47,7 +47,10 @@ class tiposervicioscontroller extends Controller
      */
     public function show($id)
     {
-        //
+        $tiposervicios = tiposervicios::find($id);
+        return $tiposervicios; 
+
+
     }
 
     /**
