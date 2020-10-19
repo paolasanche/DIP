@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\tiposervicios;
 
 class tiposervicioscontroller extends Controller
 {
@@ -13,7 +14,8 @@ class tiposervicioscontroller extends Controller
      */
     public function index()
     {
-        //
+        $tiposervicios = tiposervicios::all();
+        return response()->json(['tiposervicios' => $tiposervicios ]); 
     }
 
     /**

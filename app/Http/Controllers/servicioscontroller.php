@@ -1,8 +1,9 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\servicios;
 use Illuminate\Http\Request;
+
 
 class servicioscontroller extends Controller
 {
@@ -13,7 +14,8 @@ class servicioscontroller extends Controller
      */
     public function index()
     {
-        //
+        $servicios = servicios::all();
+        return response()->json(['servicios' => $servicios ]); 
     }
 
     /**

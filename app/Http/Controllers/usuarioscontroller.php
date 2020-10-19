@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\usuarios;
 
 class usuarioscontroller extends Controller
 {
@@ -13,7 +14,8 @@ class usuarioscontroller extends Controller
      */
     public function index()
     {
-        //
+        $usuarios = usuarios::all();
+        return response()->json(['usuarios' => $usuarios ]); 
     }
 
     /**

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\clientes;
 
 class clientescontroller extends Controller
 {
@@ -13,7 +14,8 @@ class clientescontroller extends Controller
      */
     public function index()
     {
-        //
+        $clientes = clientes::all();
+        return response()->json(['clientes' => $clientes ]); 
     }
 
     /**

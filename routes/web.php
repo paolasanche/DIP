@@ -14,3 +14,32 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+Route::group(['prefix'=>'api'], function(){
+    Route::apiResource('clientes','clientesController');
+});
+
+
+Route::group(['prefix'=>'api'], function(){
+    Route::apiResource('salones','salonesController');
+});
+
+
+
+Route::group(['prefix'=>'api'], function(){
+    Route::apiResource('servicios','serviciosController');
+});
+
+
+
+
+Route::group(['prefix'=>'api'], function(){
+    Route::apiResource('tiposervicios','tiposerviciosController');
+});
+
+
+
+Route::group(['prefix'=>'api'], function(){
+    Route::apiResource('usuarios','usuariosController');
+});
