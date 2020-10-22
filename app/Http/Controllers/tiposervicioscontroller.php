@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\tiposervicios;
-
+use App\Request\tiposervicios as tiposervicioRequests;
 class tiposervicioscontroller extends Controller
 {
     /**

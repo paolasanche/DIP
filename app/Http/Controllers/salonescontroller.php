@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\salones;
+use App\Request\salones as salonRequests;
+
 
 class salonescontroller extends Controller
 {

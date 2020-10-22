@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 use App\servicios;
 use Illuminate\Http\Request;
-
+use App\Request\servicios as servicioRequests;
 
 class servicioscontroller extends Controller
 {

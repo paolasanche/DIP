@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\clientes;
+use App\Request\clientes as clienteRequests;
 
 class clientescontroller extends Controller
 {
