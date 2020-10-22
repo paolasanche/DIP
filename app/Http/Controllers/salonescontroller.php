@@ -36,9 +36,20 @@ class salonescontroller extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
+
+
+    
+public function _construct(salones $salon){
+    $this->salon = $salon;
+    
+    }
+
+
     public function store(Request $request)
     {
-        //
+        $salon = $this->create($Request->all());
+        return $salon;
+        return response()->json (new salonRequests ($salon),201);
     }
 
     /**

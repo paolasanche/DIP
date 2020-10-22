@@ -35,9 +35,20 @@ class clientescontroller extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
+
+
+    public function _construct(clientes $cliente){
+        $this->cliente = $cliente;
+        
+        }
+
+
+
     public function store(Request $request)
     {
-        //
+        $cliente = $this->create($Request->all());
+        return $cliente;
+        return response()->json (new clienteRequests ($cliente),201);
     }
 
     /**

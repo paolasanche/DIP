@@ -34,10 +34,24 @@ class servicioscontroller extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+
+
+
+    public function _construct(servicios $servicio){
+        $this->servicio = $servicio;
+        
+        }
+
+
+
+
+        public function store(Request $request)
     {
-        //
-    }
+        $servicio = $this->create($Request->all());
+        return $servicio;
+        return response()->json (new servicioRequests ($servicio),201);
+   }
+    
 
     /**
      * Display the specified resource.

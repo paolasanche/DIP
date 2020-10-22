@@ -35,9 +35,26 @@ class usuarioscontroller extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
+
+
+
+
+    public function _construct(usuarios $usuario){
+        $this->usuario = $usuario;
+        
+        }
+
+
+
+
+
+
+
     public function store(Request $request)
     {
-        //
+        $usuario = $this->create($Request->all());
+        return $usuario;
+        return response()->json (new usuarioRequests ($usuario),201);
     }
 
     /**

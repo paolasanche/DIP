@@ -34,9 +34,27 @@ class tiposervicioscontroller extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
+
+
+
+
+
+
+    public function _construct(tiposervicios $tiposervicio){
+        $this->tiposervicio = $tiposervicio;
+        
+        }
+
+
+
+
+
+     
     public function store(Request $request)
     {
-        //
+        $tiposervicio = $this->create($Request->all());
+        return $tiposervicio;
+        return response()->json (new tiposervicioRequests ($tiposervicio),201);
     }
 
     /**
