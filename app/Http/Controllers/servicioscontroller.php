@@ -85,10 +85,12 @@ class servicioscontroller extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(servicioRequest $request, servicio $servicio)
     {
-        //
-    }
+        return $request;
+       $servicio->update($request->all());
+       return response()->json($servicio);
+    } 
 
     /**
      * Remove the specified resource from storage.

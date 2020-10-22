@@ -89,11 +89,12 @@ class tiposervicioscontroller extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(tiposervicioRequest $request, tiposervicio $tiposervicio)
     {
-        //
-    }
-
+        return $request;
+       $tiposervicio->update($request->all());
+       return response()->json($tiposervicio);
+    } 
     /**
      * Remove the specified resource from storage.
      *

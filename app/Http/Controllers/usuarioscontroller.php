@@ -87,10 +87,13 @@ class usuarioscontroller extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(usuarioRequest $request, usuario $usuario)
     {
-        //
-    }
+        return $request;
+       $usuario->update($request->all());
+       return response()->json($usuario);
+    } 
+
 
     /**
      * Remove the specified resource from storage.

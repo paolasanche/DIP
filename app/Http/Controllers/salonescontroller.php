@@ -84,11 +84,12 @@ public function _construct(salones $salon){
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(salonRequest $request, salon $salon)
     {
-        //
-    }
-
+        return $request;
+       $salon->update($request->all());
+       return response()->json($salon);
+    } 
     /**
      * Remove the specified resource from storage.
      *
