@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('layouts.index');
 });
 
 
@@ -43,3 +43,19 @@ Route::group(['prefix'=>'api'], function(){
 Route::group(['prefix'=>'api'], function(){
     Route::apiResource('usuarios','usuariosController');
 });
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+
+Route::get('/index', 'HomeController@index')->name('index');
+
+Route::get('/usuarios', 'usuariosController@usuarios')->name('usuarios');
+
+Route::get('/clientes', 'clientesController@clientes')->name('clientes');
+
+Route::get('/salones', 'salonesController@salones')->name('salones');
+
+Route::get('/tiposervicios', 'tiposerviciosController@tiposervicios')->name('tiposervicios');
+
+Route::get('/servicios', 'serviciosController@servicios')->name('servicios');

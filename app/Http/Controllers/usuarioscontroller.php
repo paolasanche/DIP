@@ -106,4 +106,12 @@ class usuarioscontroller extends Controller
         $usuarios -> delete();
         return response()->json('el registro ha sido eliminado correctamente');
     }
+
+
+    public function usuarios()
+    {
+        return view('layouts.usuarios');
+    }
+
+
 }

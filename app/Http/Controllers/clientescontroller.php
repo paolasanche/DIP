@@ -49,7 +49,7 @@ class clientescontroller extends Controller
         $cliente = $this->create($Request->all());
         return $cliente;
         return response()->json (new clienteRequests ($cliente),201);
-    }
+    } 
 
     /**
      * Display the specified resource.
@@ -102,4 +102,13 @@ class clientescontroller extends Controller
         $cliente -> delete();
         return response()->json('el registro ha sido eliminado correctamente');
     }
+
+    public function clientes()
+    {
+        return view('layouts.clientes');
+    }
+
+
+
+
 }

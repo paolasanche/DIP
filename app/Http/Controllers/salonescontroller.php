@@ -101,4 +101,13 @@ public function _construct(salones $salon){
         $salon -> delete();
         return response()->json('el registro ha sido eliminado correctamente');
     }
+
+
+
+    public function salones()
+    {
+        return view('layouts.salones');
+    }
+
+
 }

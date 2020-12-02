@@ -1,4 +1,3 @@
-
 @extends('layouts.app')
 
 @section('content')
@@ -14,6 +13,7 @@
                             {{ session('status') }}
                         </div>
                     @endif
+
                     <Usuarios-component></Usuarios-component>
                 </div>
             </div>

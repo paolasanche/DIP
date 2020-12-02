@@ -104,4 +104,17 @@ class servicioscontroller extends Controller
         return response()->json('el registro ha sido eliminado correctamente');
     
 }
+
+
+public function servicios()
+{
+    return view('layouts.servicios');
+}
+
+
+
+
+
+
+
 }

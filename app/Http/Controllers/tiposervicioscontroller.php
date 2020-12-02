@@ -106,4 +106,13 @@ class tiposervicioscontroller extends Controller
         $tiposervicio -> delete();
         return response()->json('el registro ha sido eliminado correctamente');
     }
+
+    public function tiposervicios()
+    {
+        return view('layouts.tiposervicios');
+    }
+
+
+
+
 }
