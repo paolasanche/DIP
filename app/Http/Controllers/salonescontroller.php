@@ -110,4 +110,16 @@ public function _construct(salones $salon){
     }
 
 
+    public function indexsalones()
+    {
+      $consulta = \DB::select("SELECT salones.id,salones.direccion,salones.calle,salones.cp,salones.contacto,salones.telefono,salones.correo 
+       FROM salones AS salones");
+      
+      return view ('layouts.indexsalones')->with('consulta',$consulta);
+  
+    }
+
+
+
+
 }

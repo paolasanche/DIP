@@ -107,6 +107,17 @@ class clientescontroller extends Controller
     {
         return view('layouts.clientes');
     }
+    
+
+
+    
+public function indexclientes()
+{   
+    $consulta = \DB::select("SELECT clientes.id,clientes.nombre,clientes.apellido,clientes.correo,clientes.telefono,clientes.user,clientes.password, 
+    clientes.nombre  FROM clientes AS clientes");
+    
+    return view ('layouts.indexclientes')->with('consulta',$consulta);
+}
 
 
 

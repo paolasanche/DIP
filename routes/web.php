@@ -47,9 +47,10 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-
+//////index general/////
 Route::get('/index', 'HomeController@index')->name('index');
 
+/////////////add/////////
 Route::get('/usuarios', 'usuariosController@usuarios')->name('usuarios');
 
 Route::get('/clientes', 'clientesController@clientes')->name('clientes');
@@ -59,3 +60,17 @@ Route::get('/salones', 'salonesController@salones')->name('salones');
 Route::get('/tiposervicios', 'tiposerviciosController@tiposervicios')->name('tiposervicios');
 
 Route::get('/servicios', 'serviciosController@servicios')->name('servicios');
+
+
+
+
+//////////index////////////
+Route::get('/indexusuarios', 'usuariosController@indexusuarios')->name('indexusuarios');
+
+Route::get('/indexclientes', 'clientesController@indexclientes')->name('indexclientes');
+
+Route::get('/indexsalones', 'salonesController@indexsalones')->name('indexsalones');
+
+Route::get('/indextiposervicios', 'tiposerviciosController@indextiposervicios')->name('indextiposervicios');
+
+Route::get('/indexservicios', 'serviciosController@indexservicios')->name('index');

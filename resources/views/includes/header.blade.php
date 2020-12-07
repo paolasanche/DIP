@@ -3,7 +3,7 @@
     <span class="navbar-toggler-icon"></span>
   </button>
   <a class="navbar-brand" href="index">INICIO</a>
-
+  @yield('index')
     <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
 
 
@@ -13,7 +13,8 @@
             </li>
 
 
-            <li class="nav-item active">
+
+            <li class="nav-item active"> 
               <a class="nav-link" href="clientes">CLIENTES<phpspan class="sr-only">(current)</span></a>
           @yield('clientes')
           </li>
@@ -30,7 +31,15 @@
 
             <li class="nav-item active">
               <a class="nav-link" href="tiposervicios">TIPO DE SERVICIOS <span class="sr-only">(current)</span></a>
-          @yield('usuarios')
+              <ul>
+
+
+<li class="nav-item active">
+<a class="nav-link" href="tiposervicios">TIPO DE SERVICIOS <span class="sr-only">(current)</span></a>
+@yield('usuarios')
+</li>
+
+</ul>
             </li>
 
 
@@ -38,16 +47,9 @@
 
             <li class="nav-item active">
               <a class="nav-link" href="servicios"> SERVICIOS  <span class="sr-only">(current)</span></a>
-                <ul>
+              
 
-                
-                </ul>
-
-
-
-
-
-          @yield('usuarios')
+          @yield('servicios')
             </li>
 
       

@@ -24,9 +24,6 @@
   </td>
 </tr>
 
-
-
-
 <tr>
 		<td>
       <label for="mail">Apellido:</label>
@@ -36,11 +33,7 @@
    </td>
 
 	</tr>
-
-
-
-
-  
+ 
 <tr>
 		<td>
       <label for="mail">Correo electrónico:</label>

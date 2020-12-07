@@ -113,6 +113,15 @@ public function servicios()
 
 
 
+public function indexservicios(Request $request)
+{
+    $consulta = \DB::select("SELECT servicios.id,servicios.nombre,servicios.tiposervicios_id,servicios.costo, servicios.detalle  FROM  servicios ");
+    //return $consulta;
+    return view ('layouts.indexservicios')->with('consulta',$consulta);
+}
+
+
+
 
 
 

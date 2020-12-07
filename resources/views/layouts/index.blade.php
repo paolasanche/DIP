@@ -22,7 +22,7 @@
 
 
 
-
+@section('index')
 </div>
 
 <div style="border: 0px solid green;">

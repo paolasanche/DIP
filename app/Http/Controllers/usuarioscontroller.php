@@ -19,6 +19,8 @@ class usuarioscontroller extends Controller
         return response()->json(['usuarios' => $usuarios ]); 
     }
 
+
+    
     /**
      * Show the form for creating a new resource.
      *
@@ -112,6 +114,22 @@ class usuarioscontroller extends Controller
     {
         return view('layouts.usuarios');
     }
+
+
+    public function indexusuarios()
+    {
+
+
+        $consulta = \DB::select("SELECT usuarios.id,usuarios.nombre,usuarios.apellido,usuarios.correo,usuarios.telefono,usuarios.user,usuarios.password 
+        FROM usuarios AS usuarios ");
+       
+        return view ('layouts.indexusuarios')->with('consulta',$consulta);
+    }
+
+
+
+
+
 
 
 }

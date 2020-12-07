@@ -113,6 +113,14 @@ class tiposervicioscontroller extends Controller
     }
 
 
+  public function indextiposervicios()
+    {   
+        $consulta = \DB::select("SELECT tiposervicios.id,tiposervicios.nombre FROM tiposervicios ");
+         // return $consulta;
+        return view ('layouts.indextiposervicios')->with('consulta',$consulta);
+    }
+
+
 
 
 }
